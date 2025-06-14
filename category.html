@@ -3,35 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kategori - TechnoStore</title>
+    <title>Kategori - AkTechnoStore</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <!-- Header içeriği index.html ile aynı -->
+        <div class="logo-container">
+            <img src="img/Logo.jpg" alt="Logo" class="site-logo">
+            <div class="logo">
+                <h1>AkTechno Store</h1>
+            </div>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="category.html?cat=smartphone">Ürünler</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
     <div class="mobile-nav">
-        <!-- Mobil menü içeriği index.html ile aynı -->
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="category.html?cat=smartphone">Ürünler</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
     </div>
 
     <main>
         <div class="container">
             <div class="sidebar">
-                <!-- Kategori menüsü index.html ile aynı -->
+                <a href="index.html" class="home-btn"><i class="fas fa-home"></i> Anasayfaya Dön</a>
+                <a href="favorites.html" class="favorites-btn"><i class="fas fa-heart"></i> Favorilerim</a>
+                <h3>Kategoriler</h3>
+                <ul>
+                    <li><a href="category.html?cat=smartphone"><i class="fas fa-mobile-alt"></i> Akıllı Telefon</a></li>
+                    <li><a href="category.html?cat=accessories"><i class="fas fa-headphones"></i> Telefon Aksesuarları</a></li>
+                    <li><a href="category.html?cat=tablet"><i class="fas fa-tablet-alt"></i> Akıllı Tablet</a></li>
+                    <li><a href="category.html?cat=speaker"><i class="fas fa-volume-up"></i> Bluetooth Hoparlör</a></li>
+                    <li><a href="category.html?cat=apple"><i class="fab fa-apple"></i> Apple Ürünleri</a></li>
+                    <li><a href="category.html?cat=android"><i class="fab fa-android"></i> Android Telefonlar</a></li>
+                    <li><a href="category.html?cat=laptop"><i class="fas fa-laptop"></i> Laptoplar</a></li>
+                    <li><a href="category.html?cat=playstation"><i class="fas fa-gamepad"></i> Playstation</a></li>
+                    <li><a href="category.html?cat=router"><i class="fas fa-wifi"></i> Router</a></li>
+                </ul>
             </div>
             
             <div class="content">
-                <div class="category-header">
-                    <h2 id="category-title">Kategori Adı</h2>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Ürün ara..." id="search-input">
+                    <button class="search-btn" id="search-btn"><i class="fas fa-search"></i></button>
                 </div>
-                <div class="product-grid" id="category-products">
-                    <!-- Ürünler JavaScript ile yüklenecek -->
+                
+                <div class="category-products">
+                    <h2 class="category-title">Kategori Ürünleri</h2>
+                    <div class="product-grid">
+                        <!-- Ürünler JavaScript ile yüklenecek -->
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Ürün resmi büyütme için modal -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal"><i class="fas fa-times"></i></button>
+            <img src="" alt="Ürün" id="modal-image">
+        </div>
+    </div>
 
     <footer>
         <!-- Footer içeriği index.html ile aynı -->

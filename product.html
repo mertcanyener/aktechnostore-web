@@ -3,23 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ürün Detayı - TechnoStore</title>
+    <title>Ürün Detayı - AkTechnoStore</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        /* Acil durum için inline stil */
+        body {
+            background-color: #f0f2f5;
+        }
+        header {
+            background-color: #455a64 !important;
+            color: white !important;
+        }
+        .logo h1 {
+            color: white !important;
+        }
+        .desktop-nav ul li a {
+            color: white !important;
+        }
+        .sidebar {
+            background-color: #455a64 !important;
+            color: white !important;
+        }
+        .sidebar ul li a {
+            color: #eceff1 !important;
+        }
+        .product-detail {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .product-detail:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- Header içeriği index.html ile aynı -->
+        <div class="logo-container">
+            <img src="img/Logo.jpg" alt="Logo" class="site-logo">
+            <div class="logo">
+                <h1>AkTechno Store</h1>
+            </div>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="category.html?cat=smartphone">Ürünler</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
     <div class="mobile-nav">
-        <!-- Mobil menü içeriği index.html ile aynı -->
+        <ul>
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="category.html?cat=smartphone">Ürünler</a></li>
+            <li><a href="about.html">Hakkımızda</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+        </ul>
     </div>
 
     <main>
         <div class="container">
             <div class="sidebar">
-                <!-- Kategori menüsü index.html ile aynı -->
+                <h3>Kategoriler</h3>
+                <ul>
+                    <li><a href="category.html?cat=smartphone">Akıllı Telefon</a></li>
+                    <li><a href="category.html?cat=accessories">Telefon Aksesuarları</a></li>
+                    <li><a href="category.html?cat=tablet">Akıllı Tablet</a></li>
+                    <li><a href="category.html?cat=speaker">Bluetooth Hoparlör</a></li>
+                    <li><a href="category.html?cat=apple">Apple Ürünleri</a></li>
+                    <li><a href="category.html?cat=android">Android Telefonlar</a></li>
+                    <li><a href="category.html?cat=laptop">Laptoplar</a></li>
+                    <li><a href="category.html?cat=playstation">Playstation</a></li>
+                    <li><a href="category.html?cat=router">Router</a></li>
+                </ul>
             </div>
             
             <div class="content">
@@ -31,7 +101,9 @@
     </main>
 
     <footer>
-        <!-- Footer içeriği index.html ile aynı -->
+        <div class="container">
+            <p>&copy; 2025 AkTechno Store. Tüm hakları saklıdır.</p>
+        </div>
     </footer>
 
     <script src="js/products.js"></script>
