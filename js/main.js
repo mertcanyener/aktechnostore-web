@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Öne çıkan ürünleri göster
     const productGrid = document.querySelector('.product-grid');
     if (productGrid && (window.location.pathname.includes('index.html') || window.location.pathname === '/' || window.location.pathname === '')) {
-        // Rastgele 4 ürün seç
-        const featuredProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 4);
+        // Rastgele 6 ürün seç (4 yerine 6 ürün)
+        const featuredProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 6);
         
         // Ürünleri ekle
         featuredProducts.forEach((product, index) => {

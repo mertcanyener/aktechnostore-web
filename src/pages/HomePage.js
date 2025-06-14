@@ -6,8 +6,8 @@ import { FaArrowRight } from 'react-icons/fa';
 import '../styles/HomePage.css';
 
 const HomePage = () => {
-  // Rastgele 4 ürün seç
-  const featuredProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 4);
+  // Rastgele 6 ürün seç
+  const featuredProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 6);
   
   // Kategorileri grupla
   const categories = Object.keys(categoryNames);
