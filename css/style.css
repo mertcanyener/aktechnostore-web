@@ -7,16 +7,16 @@
 
 /* Genel renk şeması değişiklikleri */
 :root {
-  --primary-color: #2a2e30; /* Gri-mavi tonu */
-  --secondary-color: #455a64; /* Koyu antrasit */
-  --accent-color: #78909c; /* Açık antrasit */
-  --light-color: #eceff1; /* Çok açık gri */
-  --dark-color: #37474f; /* Koyu gri */
-  --background-color: #2c3e50; /* Koyu antrasit arka plan */
+  --primary-color: #4caf50; /* Ana yeşil tonu */
+  --secondary-color: #81c784; /* Açık yeşil */
+  --accent-color: #a5d6a7; /* Daha açık yeşil */
+  --light-color: #ffffff; /* Beyaz */
+  --dark-color: #2e7d32; /* Koyu yeşil */
+  --background-color: #ffffff; /* Beyaz arka plan */
   --success-color: #4caf50;
   --warning-color: #ff9800;
   --danger-color: #f44336;
-  --gray-color: #b0bec5;
+  --gray-color: #e0e0e0;
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
@@ -24,8 +24,8 @@
 
 body {
   font-family: 'Oswald', sans-serif;
-  background-color: var(--background-color); /* Koyu antrasit arka plan */
-  color: var(--light-color);
+  background-color: var(--background-color);
+  color: #333333;
   line-height: 1.6;
 }
 
@@ -39,8 +39,8 @@ body {
 
 /* Header Styles */
 header {
-  background-color: var(--secondary-color);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 15px 0;
   position: sticky;
   top: 0;
@@ -183,7 +183,7 @@ main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   margin-right: 20px;
   transition: all 0.3s ease;
-  color: white;
+  color: #333333;
 }
 
 .sidebar:hover {
@@ -193,7 +193,7 @@ main {
 
 .sidebar h3 {
   margin-bottom: 20px;
-  color: white;
+  color: var(--dark-color);
   font-size: 20px;
   font-weight: 600;
   position: relative;
@@ -206,7 +206,7 @@ main {
   position: absolute;
   width: 50px;
   height: 3px;
-  background-color: var(--light-color);
+  background-color: var(--dark-color);
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -230,7 +230,7 @@ main {
 /* Kategori butonları için yeni stil */
 .sidebar ul li a {
   text-decoration: none;
-  color: var(--light-color);
+  color: #333333;
   display: block;
   padding: 10px 15px;
   border-radius: 8px;
@@ -238,38 +238,23 @@ main {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.sidebar ul li a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  z-index: -1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .sidebar ul li a:hover {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--dark-color);
+  border-color: var(--primary-color);
   transform: translateX(5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.sidebar ul li a:hover::before {
-  left: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Favoriler butonu için özel stil */
 .favorites-btn {
   margin-top: 20px;
   background-color: var(--accent-color);
-  color: white;
+  color: #333333;
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
@@ -280,11 +265,12 @@ main {
   text-align: center;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .favorites-btn:hover {
   background-color: var(--primary-color);
+  color: white;
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -358,36 +344,20 @@ main {
 
 /* Product Card Styles - Updated */
 .product-card {
-  background-color: var(--secondary-color);
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.4s, box-shadow 0.4s;
   position: relative;
   z-index: 1;
-}
-
-.product-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.4s;
-  border-radius: 10px;
+  border: 1px solid var(--gray-color);
 }
 
 .product-card:hover {
   transform: translateY(-15px) scale(1.03);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-}
-
-.product-card:hover::before {
-  opacity: 0.8;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+  border-color: var(--secondary-color);
 }
 
 .product-card:hover .product-info {
@@ -535,7 +505,7 @@ main {
 /* Footer Styles */
 footer {
   background-color: var(--secondary-color);
-  color: #fff;
+  color: #333333;
   padding: 20px 0;
   text-align: center;
   margin-top: 40px;
@@ -651,7 +621,7 @@ footer {
   transition: all 0.3s;
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .cart-btn:hover {
@@ -677,8 +647,8 @@ footer {
   padding-right: 50px;
   border-radius: 30px;
   border: 2px solid var(--secondary-color);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  background-color: white;
+  color: #333333;
   font-size: 16px;
   transition: all 0.3s;
 }
@@ -686,8 +656,7 @@ footer {
 .search-input:focus {
   outline: none;
   border-color: var(--primary-color);
-  background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 10px rgba(96, 125, 139, 0.3);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
 }
 
 .search-input::placeholder {
@@ -920,8 +889,8 @@ footer {
 /* Anasayfaya dön butonu */
 .home-btn {
   margin-bottom: 15px;
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--accent-color);
+  color: #333333;
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
@@ -932,11 +901,12 @@ footer {
   text-align: center;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .home-btn:hover {
   background-color: var(--primary-color);
+  color: white;
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
